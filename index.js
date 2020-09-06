@@ -1,10 +1,13 @@
 const express = require('express');
 const app = express();
 
+const PORT = process.env.PORT || 3000;
+
 app.use('/', (req, res, next) => {
-  res.send('<h1>Started!</h1>');
+  res.status(200).send('<h1>Started!</h1>');
+  next();
 });
 
-app.listen(3000, 'localhost', () => {
-  console.log('server listen port 3000');
+app.listen(PORT, () => {
+  console.log(`server listen port ${PORT}`);
 });
