@@ -1,0 +1,20 @@
+{
+  "name": "you-dont-know-js",
+  "version": "1.0.0",
+  "description": "Javascript weird parts and best practices",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turkaytunc/you-dont-know-js.git"
+  },
+  "keywords": [],
+  "author": "Turkay Tunc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/turkaytunc/you-dont-know-js/issues"
+  },
+  "homepage": "https://github.com/turkaytunc/you-dont-know-js#readme"
+}
