@@ -1,5 +1,9 @@
 # Book-1
 
+## :pencil: Index
+
+- [Object create](#Object-create)
+
 ## Object create
 
 ```js
