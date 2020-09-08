@@ -3,6 +3,8 @@
 ## :pencil: Index
 
 - [this keyword in lexical scope](#this-keyword-in-lexical-scope)
+- [Duplicate object using JSON parse-stringify](#Duplicate-object-using-JSON-parse-stringify)
+- [Duplicate object using assign method](#Duplicate-object-using-assign-method)
 
 ## this keyword in lexical scope
 
@@ -32,4 +34,16 @@ var obj = {
   a: 2,
 };
 foo.call(obj); // 2
+```
+
+## Duplicate object using JSON parse-stringify
+
+```js
+var newObj = JSON.parse(JSON.stringify(someObj));
+```
+
+## Duplicate object using assign method
+
+```js
+var newObj = Object.assign({}, myObject);
 ```
