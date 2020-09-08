@@ -5,6 +5,7 @@
 - [this keyword in lexical scope](#this-keyword-in-lexical-scope)
 - [Duplicate object using JSON parse-stringify](#Duplicate-object-using-JSON-parse-stringify)
 - [Duplicate object using assign method](#Duplicate-object-using-assign-method)
+- [hasOwnProperty and in](#hasOwnProperty-and-in)
 
 ## this keyword in lexical scope
 
@@ -46,4 +47,16 @@ var newObj = JSON.parse(JSON.stringify(someObj));
 
 ```js
 var newObj = Object.assign({}, myObject);
+```
+
+## hasOwnProperty and in
+
+```js
+var myObject = {
+  a: 2,
+};
+'a' in myObject; // true
+'b' in myObject; // false
+myObject.hasOwnProperty('a'); // true
+myObject.hasOwnProperty('b'); // false
 ```
