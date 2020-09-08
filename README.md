@@ -4,4 +4,4 @@
 
 ## 📝 Index
 
-1. [Up & Going](https://github.com/turkaytunc/you-dont-know-js/blob/master/book1/book-1.md)
+1. [Up & Going](https://github.com/turkaytunc/you-dont-know-js/blob/master/book-1/book-1.md)
