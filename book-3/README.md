@@ -6,6 +6,7 @@
 - [Duplicate object using JSON parse-stringify](#Duplicate-object-using-JSON-parse-stringify)
 - [Duplicate object using assign method](#Duplicate-object-using-assign-method)
 - [hasOwnProperty and in](#hasOwnProperty-and-in)
+- [Array iterator](#Array-iterator)
 
 ## this keyword in lexical scope
 
