@@ -3,6 +3,7 @@
 ## :pencil: Index
 
 - [Closure](#Closure)
+- [Modules](#Modules)
 
 ## Closure
 
@@ -35,4 +36,36 @@ for (var i = 1; i <= 5; i++) {
     console.log(i);
   }, i * 1000);
 }
+
+// solving problem above using IIFE
+
+for (var i = 1; i <= 5; i++) {
+  (function (j) {
+    setTimeout(function timer() {
+      console.log(j);
+    }, j * 1000);
+  })(i);
+}
+```
+
+## Modules
+
+```js
+var foo = (function CoolModule() {
+  var something = 'cool';
+  var another = [1, 2, 3];
+  function doSomething() {
+    console.log(something);
+  }
+  function doAnother() {
+    console.log(another.join(' ! '));
+  }
+  return {
+    doSomething: doSomething,
+    doAnother: doAnother,
+  };
+})();
+
+foo.doSomething(); // cool
+foo.doAnother(); // 1 ! 2 ! 3
 ```
