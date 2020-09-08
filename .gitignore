@@ -104,6 +104,6 @@ dist
 .tern-port
 
 
-commit.sh
-convertToLink.js
+#commit.sh
+#convertToLink.js
 cl.js
