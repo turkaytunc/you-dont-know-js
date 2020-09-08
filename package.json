@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "commit": "sh commit.sh"
+    "commit": "sh commit.sh",
+    "link": "sh link.sh"
   },
   "repository": {
     "type": "git",
