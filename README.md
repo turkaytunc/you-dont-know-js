@@ -5,4 +5,4 @@
 ## 📝 Index
 
 1. [Up & Going](https://github.com/turkaytunc/you-dont-know-js/blob/master/book-1/README.md)
-1. [Scope and Closures](https://github.com/turkaytunc/you-dont-know-js/blob/master/book-2/README.md)
+2. [Scope and Closures](https://github.com/turkaytunc/you-dont-know-js/blob/master/book-2/README.md)
