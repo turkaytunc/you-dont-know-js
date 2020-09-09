@@ -14,6 +14,8 @@
   - [INFINITY](#INFINITY)
 - [Natives String](#Natives-String)
 - [Internal classification of some types](#Internal-classification-of-some-types)
+- [Boxing wrapper](#Boxing-wrapper)
+- [Unboxing](#Unboxing)
 
 ## Numbers
 
@@ -113,4 +115,30 @@ Object.prototype.toString.call('abc'); // "[object String]"
 Object.prototype.toString.call(42); // "[object Number]"
 
 Object.prototype.toString.call(true); // "[object Boolean]"
+```
+
+## Boxing wrapper
+
+```js
+var a = 'abc';
+var b = new String(a);
+var c = Object(a);
+typeof a; // "string"
+typeof b; // "object"
+typeof c; // "object"
+b instanceof String; // true
+c instanceof String; // true
+Object.prototype.toString.call(b); // "[object String]"
+Object.prototype.toString.call(c); // "[object String]"
+```
+
+## Unboxing
+
+```js
+var a = new String('abc');
+var b = new Number(42);
+var c = new Boolean(true);
+a.valueOf(); // "abc"
+b.valueOf(); // 42
+c.valueOf(); // true
 ```
