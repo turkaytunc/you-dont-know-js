@@ -9,6 +9,9 @@
   - [Binary numbers](#Binary-numbers)
   - [Comparing floating-point numbers using epsilon](#Comparing-floating-point-numbers-using-epsilon)
   - [isInteger](#isInteger)
+  - [integer safe range](#integer-safe-range)
+  - [isNaN](#isNaN)
+  - [INFINITY](#INFINITY)
 
 ## Numbers
 
@@ -57,4 +60,28 @@ var b = 0.3;
 Number.isInteger(42); // true
 Number.isInteger(42.0); // true
 Number.isInteger(42.3); // false
+```
+
+## integer safe range
+
+```js
+Number.isSafeInteger(Number.MAX_SAFE_INTEGER); // true
+Number.isSafeInteger(Math.pow(2, 53)); // false
+Number.isSafeInteger(Math.pow(2, 53) - 1); // true
+```
+
+## isNaN
+
+```js
+var a = 2 / 'foo';
+var b = 'foo';
+Number.isNaN(a); // true
+Number.isNaN(b); // false--phew!
+```
+
+## INFINITY
+
+```js
+var a = 1 / 0; // Infinity
+var b = -1 / 0; // -Infinity
 ```
