@@ -1,4 +1,4 @@
-# Book-3
+# Book-3 this & Object Prototypes
 
 ## :pencil: Index
 

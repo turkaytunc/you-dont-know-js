@@ -1,4 +1,4 @@
-# Book-2
+# Book-2 Scope & Closures
 
 ## :pencil: Index
 
