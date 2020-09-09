@@ -16,6 +16,8 @@
 - [Internal classification of some types](#Internal-classification-of-some-types)
 - [Boxing wrapper](#Boxing-wrapper)
 - [Unboxing](#Unboxing)
+- [truncate number](#truncate-number)
+- [double negate](#double-negate)
 
 ## Numbers
 
@@ -165,4 +167,31 @@ function g(a) {
 
 var h = new RegExp('^a*b+', 'g');
 var i = /^a*b+/g;
+```
+
+## truncate number
+
+```js
+~~1e20 / 10; // 166199296
+1e20 | (0 / 10); // 1661992960
+(1e20 | 0) / 10; // 166199296
+```
+
+## double negate
+
+```js
+var a = '0';
+var b = [];
+var c = {};
+var d = '';
+var e = 0;
+var f = null;
+var g;
+!!a; // true
+!!b; // true
+!!c; // true
+!!d; // false
+!!e; // false
+!!f; // false
+!!g; // false
 ```
