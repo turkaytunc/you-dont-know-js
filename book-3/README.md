@@ -7,6 +7,7 @@
 - [Duplicate object using assign method](#Duplicate-object-using-assign-method)
 - [hasOwnProperty and in](#hasOwnProperty-and-in)
 - [Array iterator](#Array-iterator)
+- [Object create method](#Object-create-method)
 
 ## this keyword in lexical scope
 
@@ -71,4 +72,32 @@ it.next(); // { value:1, done:false }
 it.next(); // { value:2, done:false }
 it.next(); // { value:3, done:false }
 it.next(); // { done:true }
+```
+
+## Object create method
+
+```js
+var anotherObject = {
+  a: 2,
+};
+var myObject = Object.create(anotherObject, {
+  b: {
+    enumerable: false,
+    writable: true,
+    configurable: false,
+    value: 3,
+  },
+  c: {
+    enumerable: true,
+    writable: false,
+    configurable: false,
+    value: 4,
+  },
+});
+myObject.hasOwnProperty('a'); // false
+myObject.hasOwnProperty('b'); // true
+myObject.hasOwnProperty('c'); // true
+myObject.a; // 2
+myObject.b; // 3
+myObject.c; // 4
 ```

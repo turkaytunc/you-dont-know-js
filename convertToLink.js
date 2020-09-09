@@ -1,4 +1,4 @@
-//converts given header to md link
+//converts given string header to md link
 const convertToLink = () => {
   let str = process.argv[2];
   let splitStr = str.split(' ');
