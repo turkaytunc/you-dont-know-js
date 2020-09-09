@@ -7,6 +7,8 @@
   - [Expotential numbers](#Expotential-numbers)
   - [Octal numbers](#Octal-numbers)
   - [Binary numbers](#Binary-numbers)
+  - [Comparing floating-point numbers using epsilon](#Comparing-floating-point-numbers-using-epsilon)
+  - [isInteger](#isInteger)
 
 ## Numbers
 
@@ -37,4 +39,22 @@ var onemilliononehundredthousand = 1.1e6; // means 1.1 * 10^6
 
 ```js
 0b11110011; // binary for: 243
+```
+
+## Comparing floating-point numbers using epsilon
+
+```js
+function numbersCloseEnoughToEqual(n1, n2) {
+  return Math.abs(n1 - n2) < Number.EPSILON;
+}
+var a = 0.1 + 0.2;
+var b = 0.3;
+```
+
+## isInteger
+
+```js
+Number.isInteger(42); // true
+Number.isInteger(42.0); // true
+Number.isInteger(42.3); // false
 ```
