@@ -12,6 +12,8 @@
   - [integer safe range](#integer-safe-range)
   - [isNaN](#isNaN)
   - [INFINITY](#INFINITY)
+- [Natives String](#Natives-String)
+- [Internal classification of some types](#Internal-classification-of-some-types)
 
 ## Numbers
 
@@ -84,4 +86,31 @@ Number.isNaN(b); // false--phew!
 ```js
 var a = 1 / 0; // Infinity
 var b = -1 / 0; // -Infinity
+```
+
+## Natives String
+
+```js
+var a = new String('abc');
+typeof a; // "object" ... not "String"
+a instanceof String; // true
+Object.prototype.toString.call(a); // "[object String]"
+```
+
+## Internal classification of some types
+
+```js
+Object.prototype.toString.call([1, 2, 3]); // "[object Array]"
+
+Object.prototype.toString.call(/regex-literal/i); // "[object RegExp]"
+
+Object.prototype.toString.call(null); // "[object Null]"
+
+Object.prototype.toString.call(undefined); // "[object Undefined]"
+
+Object.prototype.toString.call('abc'); // "[object String]"
+
+Object.prototype.toString.call(42); // "[object Number]"
+
+Object.prototype.toString.call(true); // "[object Boolean]"
 ```
