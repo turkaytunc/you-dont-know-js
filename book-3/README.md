@@ -8,6 +8,7 @@
 - [hasOwnProperty and in](#hasOwnProperty-and-in)
 - [Array iterator](#Array-iterator)
 - [Object create method](#Object-create-method)
+- [concise method declarations](#concise-method-declarations)
 
 ## this keyword in lexical scope
 
@@ -100,4 +101,20 @@ myObject.hasOwnProperty('c'); // true
 myObject.a; // 2
 myObject.b; // 3
 myObject.c; // 4
+```
+
+## concise method declarations
+
+```js
+var LoginController = {
+  errors: [],
+  getUser() {
+    // Look ma, no `function`!
+    // ...
+  },
+  getPassword() {
+    // ...
+  },
+  // ...
+};
 ```
