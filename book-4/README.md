@@ -18,6 +18,8 @@
 - [Unboxing](#Unboxing)
 - [truncate number](#truncate-number)
 - [double negate](#double-negate)
+- [Logical or logical and](#Logical-or-logical-and)
+- [Window escape](#Window-escape)
 
 ## Numbers
 
@@ -194,4 +196,22 @@ var g;
 !!e; // false
 !!f; // false
 !!g; // false
+```
+
+## Logical or logical and
+
+```js
+var a = 42;
+var b = 'abc';
+var c = null;
+a || b; // 42
+a && b; // "abc"
+c || b; // "abc"
+c && b; // null
+```
+
+## Window escape
+
+```js
+window.escape( "?foo=97%&bar=3%" ) produces "%3Ffoo%3D97%25%26bar%3D3%25".
 ```
